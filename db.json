@@ -1,206 +1,135 @@
 {
-  "pokemons": [
+  "products": [
     {
-      "id": 1,
-      "num": 1,
-      "name": "bulbasaur",
-      "types": [
+      "id": "c9ad1d7b-0e74-ed04-4c00-2c2346d0ebec",
+      "title": "Manzana",
+      "price": 2,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://biotrendies.com/wp-content/uploads/2015/06/manzana.jpg",
+      "tags": 
         {
-          "slot": 1,
-          "type": {
-            "code": 1,
-            "name": "grass"
-          }
-        },
-        {
-          "slot": 2,
-          "type": {
-            "code": 2,
-            "name": "poison"
-          }
+          "category": "fruit",
+          "colour": "red"
         }
-      ],
-      "images": [
-        {
-          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/1.png",
-          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/1.png"
-        },
-        {
-          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/1.png",
-          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/1.png"
-        }
-      ],
-      "moves": {
-        "HM": [
-          "cut"
-        ]
-      }
     },
     {
-      "id": 2,
-      "num": 549,
-      "name": "lilligant",
-      "types": [
+      "id": "4578566a-d7a1-7271-b01f-4a49d770dca2",
+      "title": "Pera",
+      "price": 4,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg",
+      "tags": 
         {
-          "slot": 1,
-          "type": {
-            "code": 1,
-            "name": "grass"
-          }
+          "category": "fruit",
+          "colour": "green"
         }
-      ],
-      "images": [
-        {
-          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/549.png",
-          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/549.png"
-        },
-        {
-          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/549.png",
-          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/549.png"
-        }
-      ],
-      "moves": {
-        "HM": null
-      }
     },
     {
-      "id": 3,
-      "num": 6,
-      "name": "charizard",
-      "types": [
+      "id": "db2cf8a3-fe1a-4c1b-4bdd-f69a645ca6d9",
+      "title": "Plátano",
+      "price": 6,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://images.ecestaticos.com/hKyxfOUrnXiSYeK4-y5bZ_7kBnc=/0x0:1984x1511/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F3e5%2F860%2F45e%2F3e586045ef2130f61a45fdaa4b625bef.jpg",
+      "tags": 
         {
-          "slot": 1,
-          "type": {
-            "code": 1,
-            "name": "fire"
-          }
-        },
-        {
-          "slot": 2,
-          "type": {
-            "code": 2,
-            "name": "flying"
-          }
+          "category": "fruit",
+          "colour": "yellow"
         }
-      ],
-      "images": [
-        {
-          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/6.png",
-          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/6.png"
-        },
-        {
-          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/6.png",
-          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/6.png"
-        }
-      ],
-      "moves": {
-        "HM": [
-          "fly"
-        ]
-      }
     },
     {
-      "id": 4,
-      "num": 50,
-      "name": "diglett",
-      "types": [
+      "id": "9f876ed8-4ec6-6d8f-f5bb-4d0536199d7b",
+      "title": "Kiwi",
+      "price": 3,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://www.5aldia.es/es/wp-content/uploads/2017/09/kiwi.jpeg",
+      "tags": 
         {
-          "slot": 1,
-          "type": {
-            "code": 1,
-            "name": "ground"
-          }
+          "category": "fruit",
+          "colour": "green"
         }
-      ],
-      "images": [
-        {
-          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/50.png",
-          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/50.png"
-        },
-        {
-          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/50.png",
-          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/50.png"
-        }
-      ],
-      "moves": {
-        "HM": null
-      }
     },
     {
-      "id": 5,
-      "num": 587,
-      "name": "emolga",
-      "types": [
+      "id": "f28930bd-d1d7-dc49-81cb-8d3567b51fec",
+      "title": "Mango",
+      "price": 5,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://www.agroponiente.com/wp-content/uploads/2021/08/mango-Agroponiente.png",
+      "tags": 
         {
-          "slot": 1,
-          "type": {
-            "code": 1,
-            "name": "electric"
-          }
-        },
-        {
-          "slot": 2,
-          "type": {
-            "code": 2,
-            "name": "flying"
-          }
+          "category": "fruit",
+          "colour": "yellow"
         }
-      ],
-      "images": [
-        {
-          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/587.png",
-          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/587.png"
-        },
-        {
-          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/587.png",
-          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/587.png"
-        }
-      ],
-      "moves": {
-        "HM": [
-          "surf"
-        ]
-      }
     },
     {
-      "id": 6,
-      "num": 60,
-      "name": "polywag",
-      "types": [
+      "id": "ff898b13-4108-9f30-21c4-2627e6691a1d",
+      "title": "Sandía",
+      "price": 7,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://www.agroponiente.com/wp-content/uploads/2021/09/sandia-mini-Agroponiente.png",
+      "tags": 
         {
-          "slot": 1,
-          "type": {
-            "code": 1,
-            "name": "water"
-          }
+          "category": "fruit",
+          "colour": "red"
         }
-      ],
-      "images": [
+    },
+    {
+      "id": "c3d74354-672f-cea7-3e3c-1564356a1e42",
+      "title": "Melón",
+      "price": 5,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://okdiario.com/img/recetas/2017/06/20/propiedades-de-melon.jpg",
+      "tags": 
         {
-          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/60.png",
-          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/60.png"
-        },
-        {
-          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/60.png",
-          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/60.png"
+          "category": "fruit",
+          "colour": "red"
         }
-      ],
-      "moves": {
-        "HM": [
-          "surf"
-        ]
-      }
+    },
+    {
+      "id": "77023372-c835-0c6b-2c85-5e09dcb1f874",
+      "title": "Arándanos",
+      "price": 3,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "https://castrofruit.es/wp-content/uploads/2021/01/ARANDANOS.jpg",
+      "tags": 
+        {
+          "category": "fruit",
+          "colour": "purple"
+        }
+    },
+    {
+      "id": "5f2410e6-35de-21ad-65e0-ec56523663ce",
+      "title": "Frambuesa",
+      "price": 3,
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "imageLink": "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/29.jpg",
+      "tags": 
+        {
+          "category": "fruit",
+          "colour": "red"
+        }
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "7c38c6a1-00f5-fd6d-b39a-17854f3e7e72",
       "username": "anakin",
-      "password": "jcosmvl"
+      "password": "jcosmvl",
+      "rol": "user"
     }, {
-      "id": 2,
+      "id": "dd988800-8010-3b4f-92d1-505a8dbc3dfa",
       "username": "gtom1",
-      "password": "Hola1"
+      "password": "Hola1",
+      "rol": "user"
+    }, {
+      "id": "8372fb18-11c7-33b9-ddf0-480e39f0be68",
+      "username": "bad_bunny",
+      "password": "yhlqmdlg",
+      "rol": "user"
+    }, {
+      "id": "ea08bc59-4b96-ae89-09ee-1be05f8873a9",
+      "username": "admin",
+      "password": "Admin123",
+      "rol": "admin"
     }
   ]
 }
