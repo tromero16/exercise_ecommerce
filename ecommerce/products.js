@@ -1,16 +1,29 @@
-var products = [
-    {id:"1", title: "Manzana", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://biotrendies.com/wp-content/uploads/2015/06/manzana.jpg"},
-    {id:"2", title: "Pera", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg"},
-    {id:"3", title: "Plátano", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://images.ecestaticos.com/hKyxfOUrnXiSYeK4-y5bZ_7kBnc=/0x0:1984x1511/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F3e5%2F860%2F45e%2F3e586045ef2130f61a45fdaa4b625bef.jpg"},
-    {id:"4", title: "Kiwi", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.5aldia.es/es/wp-content/uploads/2017/09/kiwi.jpeg"},
-    {id:"5", title: "Mango", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.agroponiente.com/wp-content/uploads/2021/08/mango-Agroponiente.png"},
-    {id:"6", title: "Sandía", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.agroponiente.com/wp-content/uploads/2021/09/sandia-mini-Agroponiente.png"},
-    {id:"7", title: "Melón", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://okdiario.com/img/recetas/2017/06/20/propiedades-de-melon.jpg"},
-    {id:"8", title: "Arándanos", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://castrofruit.es/wp-content/uploads/2021/01/ARANDANOS.jpg"},
-    {id:"9", title: "Frambuesa", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/29.jpg"}
-];
+// var products = [
+//     {id:"1", title: "Manzana", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://biotrendies.com/wp-content/uploads/2015/06/manzana.jpg"},
+//     {id:"2", title: "Pera", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg"},
+//     {id:"3", title: "Plátano", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://images.ecestaticos.com/hKyxfOUrnXiSYeK4-y5bZ_7kBnc=/0x0:1984x1511/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F3e5%2F860%2F45e%2F3e586045ef2130f61a45fdaa4b625bef.jpg"},
+//     {id:"4", title: "Kiwi", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.5aldia.es/es/wp-content/uploads/2017/09/kiwi.jpeg"},
+//     {id:"5", title: "Mango", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.agroponiente.com/wp-content/uploads/2021/08/mango-Agroponiente.png"},
+//     {id:"6", title: "Sandía", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.agroponiente.com/wp-content/uploads/2021/09/sandia-mini-Agroponiente.png"},
+//     {id:"7", title: "Melón", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://okdiario.com/img/recetas/2017/06/20/propiedades-de-melon.jpg"},
+//     {id:"8", title: "Arándanos", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://castrofruit.es/wp-content/uploads/2021/01/ARANDANOS.jpg"},
+//     {id:"9", title: "Frambuesa", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/29.jpg"}
+// ];
 
-const id_length = 1;
+const url = `https://exerciseecommerce-production.up.railway.app`
+
+const id_length = 36;
+
+function createUUID() {
+  let dt = new Date().getTime();
+  const uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g, char => {
+      const r = (dt + Math.random()*16) % 16 | 0;
+      dt = Math.floor(dt/16);
+      return (char === 'x' ? r :(r&0x3|0x8)).toString(16);
+  });
+
+  return uuid;
+}
 
 const eventHandlerPurchase = (cart) => {
   $('#purchase-button').on("click", function() {
@@ -18,6 +31,11 @@ const eventHandlerPurchase = (cart) => {
     var purchase = JSON.parse(JSON.stringify(cart));  //Deep copying, sino ambas variables hacen referencia a la misma posición de memoria
 
     delete Object.assign(purchase[0], { id_purchase: purchase[0].id_cart })["id_cart"];
+    purchase[0].id_purchase = createUUID(); 
+    
+    axios.post(url+`/purchases`, {purchase});
+
+    console.log("Subido al servidor");
 
     $('#cart-dropdown-menu').empty().append(
       `
@@ -27,6 +45,7 @@ const eventHandlerPurchase = (cart) => {
       `
     )
     localStorage.removeItem("cart");
+    createUUID
   })
 }
 const displayProducts = (products) => {
@@ -70,7 +89,7 @@ const displayProducts = (products) => {
   });
 }
 
-const displayCart = (cart) => {
+const displayCart = (products, cart) => {
   $('#cart-dropdown-menu').empty();
   for(let i = 1; i < cart.length;i++) {
     let product = products.find(element => element.id === cart[i].prod_id);
@@ -124,7 +143,10 @@ const getId = (id) => {
     return id_num = id.substr(id.length-id_length, id_length);
 }
 
-$( window ).on( "load",  function () {
+$( window ).on( "load",  async function () {
+
+  const products = (await axios.get(url+`/products`)).data;
+  console.log(products)
 
   if (!localStorage.getItem("user")) {
     window.location.href = "login.html";
@@ -133,13 +155,13 @@ $( window ).on( "load",  function () {
   if (JSON.parse(localStorage.getItem("cart")) != null) {
     var cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart);
-    displayCart(cart);
+    displayCart(products, cart);
   
   } else {
     var cart = [{
-      "id_cart": Math.floor(Math.random() * 20) + 11,
+      "id_cart": createUUID(),
       "total_price": 0,
-      "id_user": 0
+      "id_user": JSON.parse(localStorage.getItem("user")).id
     }]
 
     console.log(cart);
@@ -207,7 +229,7 @@ $( window ).on( "load",  function () {
 
             localStorage.setItem("cart", JSON.stringify(cart));
 
-            displayCart(cart);
+            displayCart(products, cart);
         }
     });
 
