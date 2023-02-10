@@ -1,15 +1,3 @@
-// var products = [
-//     {id:"1", title: "Manzana", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://biotrendies.com/wp-content/uploads/2015/06/manzana.jpg"},
-//     {id:"2", title: "Pera", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg"},
-//     {id:"3", title: "Plátano", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://images.ecestaticos.com/hKyxfOUrnXiSYeK4-y5bZ_7kBnc=/0x0:1984x1511/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F3e5%2F860%2F45e%2F3e586045ef2130f61a45fdaa4b625bef.jpg"},
-//     {id:"4", title: "Kiwi", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.5aldia.es/es/wp-content/uploads/2017/09/kiwi.jpeg"},
-//     {id:"5", title: "Mango", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.agroponiente.com/wp-content/uploads/2021/08/mango-Agroponiente.png"},
-//     {id:"6", title: "Sandía", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://www.agroponiente.com/wp-content/uploads/2021/09/sandia-mini-Agroponiente.png"},
-//     {id:"7", title: "Melón", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://okdiario.com/img/recetas/2017/06/20/propiedades-de-melon.jpg"},
-//     {id:"8", title: "Arándanos", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "https://castrofruit.es/wp-content/uploads/2021/01/ARANDANOS.jpg"},
-//     {id:"9", title: "Frambuesa", price: 18, description: "Some quick example text to build on the card title and make up the bulk of the card's content.", imageLink: "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/29.jpg"}
-// ];
-
 const url = `https://exerciseecommerce-production.up.railway.app`
 
 const id_length = 36;
@@ -41,7 +29,7 @@ const createCart = () => {
     `
   )
 
-  return cart;
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 const eventHandlerPurchase = (cart) => {
@@ -54,17 +42,61 @@ const eventHandlerPurchase = (cart) => {
     
     axios.post(url+`/purchases`, {purchase});
 
-    console.log("Subido al servidor");
     localStorage.removeItem("cart");
 
-    cart = createCart();
+    createCart();
     
   })
 }
+const displayProductsFilter = (products, category) => {
+  $('#main-wrapper').empty();
+  products.forEach(element => {
+    if(element.tags.category === category) {
+    $('#main-wrapper').append(
+        `<article class="col-lg-4 col-md-6 col-xs-12" id="${element.id}">
+        <div class="card">
+          <div>
+            <img
+              src=${element.imageLink}
+              class="card-img-top"
+              alt=${element.title}
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">
+                ${element.description}
+            </p>
+            <div class="add-more-less">
+              <button type="button" class="btn add-minus" id="add-minus${element.id}">
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+              </button>
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                class="item-count w-70"
+                id="input${element.id}"
+              />
+              <button type="button" class="btn add-more" id="add-more${element.id}">
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+              </button>
+            </div>
+            <div class="add-cart">
+              <a href="#" class="btn btn-primary add-cart-button" id="add-cart${element.id}">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </article>`)
+    }
+  });
+  buttonsFunctionality(products);
+}
+
 const displayProducts = (products) => {
   products.forEach(element => {
     $('#main-wrapper').append(
-        `<article class="col-lg-4 col-md-6 col-xs-12 id=${element.id}">
+        `<article class="col-lg-4 col-md-6 col-xs-12" id="${element.id}">
         <div class="card">
           <div>
             <img
@@ -100,6 +132,7 @@ const displayProducts = (products) => {
         </div>
       </article>`)
   });
+  buttonsFunctionality(products);
 }
 
 const displayCart = (products, cart) => {
@@ -147,7 +180,6 @@ const displayCart = (products, cart) => {
         <button type="submit" class="btn btn-primary py-0" id="purchase-button"><h6 class="my-0 py-1">Purchase</h6></button>
       </li>      
       `);
-      console.log(cart)
       eventHandlerPurchase(cart);
            
   }
@@ -156,86 +188,99 @@ const getId = (id) => {
     return id_num = id.substr(id.length-id_length, id_length);
 }
 
+const buttonsFunctionality = (products) => {
+
+  $('.add-more').on("click", function () {
+    let id = `input${getId(this.id)}`;
+    document.getElementById(id).value++;  
+  });
+
+  $('.add-minus').on("click", function () {
+      let id = `input${getId(this.id)}`;
+      let element = document.getElementById(id);
+      if(element.value > 0){
+          element.value--;  
+      } else {
+          element.value = 0;  
+      }
+      
+  });
+  $('.add-cart-button').on("click", function () {
+      
+
+    const prod_id = getId(this.id);
+
+    const units = Number(document.getElementById(`input${prod_id}`).value);
+    
+    const price = products.find(element => element.id === prod_id).price*units;
+    
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    
+    if(units > 0) {
+      document.getElementById(`input${prod_id}`).value = null;
+
+        let existing_element = cart.find(element => element.prod_id === prod_id);
+
+        if (existing_element) {
+          existing_element.units += units;
+          existing_element.price += price;
+        } else {
+          let cart_element = {"prod_id":prod_id, "units":units, "price":price}; //El precio es el total de todos los productos del mismo tipo
+          cart.push(cart_element);
+        }
+        
+        cart[0].total_price = 0
+
+        for(let i = 1; i<cart.length; i++) {
+            cart[0].total_price += cart[i].price;
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        displayCart(products, cart);
+    }
+});
+
+}
+
 $( window ).on( "load",  async function () {
 
   const products = (await axios.get(url+`/products`)).data;
-  console.log(products)
 
   if (!localStorage.getItem("user")) {
     window.location.href = "login.html";
   }
   
   if (JSON.parse(localStorage.getItem("cart")) != null && JSON.parse(localStorage.getItem("user")).id === JSON.parse(localStorage.getItem("cart"))[0].id_user) {
-    var cart = JSON.parse(localStorage.getItem("cart"));
-    console.log(cart);
+    let cart = JSON.parse(localStorage.getItem("cart"));
     displayCart(products, cart);
   
   } else {
-    var cart = createCart();
+    createCart();
   }
 
   displayProducts(products);
-
-    $('.add-more').on("click", function () {
-        let id = `input${getId(this.id)}`;
-        document.getElementById(id).value++;  
-    });
-
-    $('.add-minus').on("click", function () {
-        let id = `input${getId(this.id)}`;
-        let element = document.getElementById(id);
-        if(element.value > 0){
-            element.value--;  
-        } else {
-            element.value = 0;  
-        }
-        
-    });
 
     $('#logout-button').on("click", function () {
       localStorage.removeItem("user");
     });
 
-    $('.add-cart-button').on("click", function () {
-      
-
-        const prod_id = getId(this.id);
-        //console.log(typeof(document.getElementById(`input${prod_id}`).value))
-
-        const units = Number(document.getElementById(`input${prod_id}`).value);
-        
-        const price = products.find(element => element.id === prod_id).price*units;
-        
-        console.log(cart)
-        
-        if(units > 0) {
-          document.getElementById(`input${prod_id}`).value = null;
-
-            let existing_element = cart.find(element => element.prod_id === prod_id);
-
-            if (existing_element) {
-              existing_element.units += units;
-              existing_element.price += price;
-            } else {
-              let cart_element = {"prod_id":prod_id, "units":units, "price":price}; //El precio es el total de todos los productos del mismo tipo
-              cart.push(cart_element);
-            }
-            
-            cart[0].total_price = 0
-
-            for(let i = 1; i<cart.length; i++) {
-                cart[0].total_price += cart[i].price;
-            }
-
-            localStorage.setItem("cart", JSON.stringify(cart));
-
-            displayCart(products, cart);
-        }
-    });
-
     $('.navbar-button').on("click", function () {
-      console.log('Hola?');
-      console.log(this.innerText.toLowerCase());
-      
+      if (this.innerText === "Ver todo") {
+        $('#main-wrapper').empty();
+        displayProducts(products);
+      } else {
+        displayProductsFilter(products, this.innerText.toLowerCase());
+      }      
     })
+
+    
+
+    // $('#cart-dropdown').hover(function(){ 
+    //     $('.dropdown-toggle', this).trigger('click'); 
+    // });
+
+    // $('#account-dropdown').hover(function(){ 
+    //     $('.dropdown-toggle', this).trigger('click'); 
+    // });
 });

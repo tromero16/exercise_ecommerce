@@ -30,7 +30,6 @@ const handleSubmit = async (e) => {
     
     let users = await getUsers();
 
-    console.log(`Users after return: ${users}`);
     let user = users.find(user => (user.username === input_username && user.password === input_password));
     
     if(!user) {
@@ -69,7 +68,6 @@ const handleSignup = async (e) => {
         "rol": "user"
         }
         await axios.post(url+`/users`, user);
-        console.log(user)
         window.location.href = "login.html"
     }    
 }
@@ -123,16 +121,6 @@ const getUsers = async () => {
 }
 
 $( window ).on( "load", async function () {
-//    users = axios.get(url+`/users`)
-//    .then( response => {
-       
-//        console.log(`Users before return: ${response.data}`)
-//        return response.data
-
-//    } )
-//    .catch( err => {
-//        console.log(err)
-//    } )
     $( '#submit_button' ).on("click",  await handleSubmit);
 
     $( '#signin-text' ).on("click",  async function() {
