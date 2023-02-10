@@ -2,109 +2,169 @@
   "products": [
     {
       "id": "c9ad1d7b-0e74-ed04-4c00-2c2346d0ebec",
-      "title": "Manzana",
-      "price": 2,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://biotrendies.com/wp-content/uploads/2015/06/manzana.jpg",
+      "title": "Camiseta roja",
+      "price": 10,
+      "description": "Cómoda camiseta roja de manga corta. Hecha 100% de algodón.",
+      "imageLink": "https://www.disfrazjaiak.com/16821-large_default/camiseta-roja-de-manga-corta.jpg",
       "tags": 
         {
-          "category": "fruit",
+          "category": "camiseta",
           "colour": "red"
         }
     },
     {
       "id": "4578566a-d7a1-7271-b01f-4a49d770dca2",
-      "title": "Pera",
-      "price": 4,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg",
+      "title": "Camiseta amarilla",
+      "price": 10,
+      "description": "Cómoda camiseta amarilla de manga corta. Hecha 100% de algodón.",
+      "imageLink": "https://holoceneworld.com/wp-content/uploads/2022/05/Camiseta-amarilla-manga-corta-algodon-oganico-Holocene-Classics-Espalda.jpeg",
       "tags": 
         {
-          "category": "fruit",
-          "colour": "green"
+          "category": "camiseta",
+          "colour": "yellow"
         }
     },
     {
       "id": "db2cf8a3-fe1a-4c1b-4bdd-f69a645ca6d9",
-      "title": "Plátano",
-      "price": 6,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://images.ecestaticos.com/hKyxfOUrnXiSYeK4-y5bZ_7kBnc=/0x0:1984x1511/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F3e5%2F860%2F45e%2F3e586045ef2130f61a45fdaa4b625bef.jpg",
+      "title": "Camiseta logo Nike negra",
+      "price": 15,
+      "description": "Camiseta negra con logotipo en el pecho de Nike. Hecha 100% de algodón.",
+      "imageLink": "https://deportesmoncho.com/wp-content/uploads/2022/06/nike-club-t-shirt-womens-414356-dn2393-010.jpg",
       "tags": 
         {
-          "category": "fruit",
-          "colour": "yellow"
+          "category": "camiseta",
+          "colour": "black"
         }
     },
     {
       "id": "9f876ed8-4ec6-6d8f-f5bb-4d0536199d7b",
-      "title": "Kiwi",
-      "price": 3,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://www.5aldia.es/es/wp-content/uploads/2017/09/kiwi.jpeg",
+      "title": "Camiseta roja Adidas",
+      "price": 15,
+      "description": "Camiseta roja de la marca Adidas con logotipo y tres rayas en los hombros.",
+      "imageLink": "https://images.asos-media.com/products/camiseta-roja-con-estampado-de-3-rayas-adicolor-de-adidas-originals/202171372-1-red",
       "tags": 
         {
-          "category": "fruit",
-          "colour": "green"
+          "category": "camiseta",
+          "colour": "red"
         }
     },
     {
       "id": "f28930bd-d1d7-dc49-81cb-8d3567b51fec",
-      "title": "Mango",
-      "price": 5,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://www.agroponiente.com/wp-content/uploads/2021/08/mango-Agroponiente.png",
+      "title": "Sudadera negra",
+      "price": 20,
+      "description": "Sudadera con capucha, bolsillo canguro. Puños y cinturilla de punto canalé 1x1 con elastano. Material de alta calidad 280 g/m².",
+      "imageLink": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/41Uvj2-tlSL._AC_UX385_.jpg",
       "tags": 
         {
-          "category": "fruit",
-          "colour": "yellow"
+          "category": "sudadera",
+          "colour": "black"
         }
     },
     {
       "id": "ff898b13-4108-9f30-21c4-2627e6691a1d",
-      "title": "Sandía",
-      "price": 7,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://www.agroponiente.com/wp-content/uploads/2021/09/sandia-mini-Agroponiente.png",
+      "title": "Sudadera morada",
+      "price": 25,
+      "description": "Sudadera morada con capucha y bolsillos saco delanteros, 80% algodón, 20% poliéster.",
+      "imageLink": "https://static.wixstatic.com/media/ff7ce5_2c0005d7e9224189bad4660e98e50621~mv2.jpg/v1/fill/w_920,h_920,al_c,q_85/ff7ce5_2c0005d7e9224189bad4660e98e50621~mv2.jpg",
       "tags": 
         {
-          "category": "fruit",
-          "colour": "red"
-        }
-    },
-    {
-      "id": "c3d74354-672f-cea7-3e3c-1564356a1e42",
-      "title": "Melón",
-      "price": 5,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://okdiario.com/img/recetas/2017/06/20/propiedades-de-melon.jpg",
-      "tags": 
-        {
-          "category": "fruit",
-          "colour": "red"
-        }
-    },
-    {
-      "id": "77023372-c835-0c6b-2c85-5e09dcb1f874",
-      "title": "Arándanos",
-      "price": 3,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "https://castrofruit.es/wp-content/uploads/2021/01/ARANDANOS.jpg",
-      "tags": 
-        {
-          "category": "fruit",
+          "category": "sudadera",
           "colour": "purple"
         }
     },
     {
-      "id": "5f2410e6-35de-21ad-65e0-ec56523663ce",
-      "title": "Frambuesa",
-      "price": 3,
-      "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
-      "imageLink": "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/29.jpg",
+      "id": "c3d74354-672f-cea7-3e3c-1564356a1e42",
+      "title": "Sudadera blanca",
+      "price": 20,
+      "description": "Sudadera blanca con capucha que combina con cualquier estilo.",
+      "imageLink": "https://www.multiuniformes.com/productos/imagenes/img_145666_c628d628b5ff902029bf9be230ee1526_1.jpg",
       "tags": 
         {
-          "category": "fruit",
+          "category": "sudadera",
+          "colour": "white"
+        }
+    },
+    {
+      "id": "77023372-c835-0c6b-2c85-5e09dcb1f874",
+      "title": "Air Force 1 blancas",
+      "price": 120,
+      "description": "Elige comodidad, estilo urbano y una tracción increíble con las zapatillas Air Force 1 blancas.",
+      "imageLink": "https://factoryshoes.es/111-large_default/nike-air-force-one-low-blancas.jpg",
+      "tags": 
+        {
+          "category": "zapatillas",
+          "colour": "white"
+        }
+    },
+    {
+      "id": "5f2410e6-35de-21ad-65e0-ec56523663ce",
+      "title": "New Balance 550",
+      "price": 110,
+      "description": "Las New Balance 550 White Red presentan un upper de cuero blanco con cuellos y acentos de malla rojos.",
+      "imageLink": "https://images.stockx.com/images/New-Balance-550-White-Red-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1630617711&q=75",
+      "tags": 
+        {
+          "category": "zapatillas",
+          "colour": "red"
+        }
+    },
+    {
+      "id": "92d5cd58-2e89-6c6b-f871-96549d6abae5",
+      "title": "Adidas Centennial 85",
+      "price": 99,
+      "description": "¡Los clásicos vuelven a estar de moda! Estas zapatillas Adidas son lo más pegado del momento.",
+      "imageLink": "https://cdn-images.farfetch-contents.com/19/30/28/71/19302871_42427351_600.jpg",
+      "tags": 
+        {
+          "category": "zapatillas",
+          "colour": "white"
+        }
+    },
+    {
+      "id": "3301d1e8-92f8-7acc-dc5c-a2dde1518a50",
+      "title": "Adidas Yeezy 350",
+      "price": 260,
+      "description": "Los zapataos más famosos, diseñados por Kanye West para Adidas.",
+      "imageLink": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Beluga-Reflective-Product.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1638996919&q=75",
+      "tags": 
+        {
+          "category": "zapatillas",
+          "colour": "grey"
+        }
+    },
+    {
+      "id": "d6f3a063-725d-dd59-7b9c-de91ece29bb6",
+      "title": "Pantalones negros",
+      "price": 22,
+      "description": "Pantalones vaqueros negros para ir a la última moda.",
+      "imageLink": "https://media.glamour.mx/photos/6190658ba6e030d6480f793f/1:1/w_3000,h_3000,c_limit/243827.jpg",
+      "tags": 
+        {
+          "category": "pantalones",
+          "colour": "black"
+        }
+    },
+    {
+      "id": "3223ae16-abf0-cf5d-4675-d5e045ac6814",
+      "title": "Pantalones grises",
+      "price": 14,
+      "description": "Pantalón de chándal gris de algodón. Los pantalones más cómodos que exsiten y encima combinan con todo.",
+      "imageLink": "https://media.revistagq.com/photos/606490eaa0750e3c87b2af9d/master/w_1600%2Cc_limit/hm%2520pantalon%2520chandal.jpeg",
+      "tags": 
+        {
+          "category": "pantalones",
+          "colour": "grey"
+        }
+    },
+    {
+      "id": "f5b3023c-3f14-ee5a-7c82-ee2098d9b73e",
+      "title": "Pantalones rojos",
+      "price": 23,
+      "description": "Pantalones vaqueros de motorista, pantalón con varias cremalleras y agujeros de color rojo",
+      "imageLink": "https://ae01.alicdn.com/kf/Heee0c230b7be4fc68f9fdf34ae54c035J/Idopy-pantalones-vaqueros-de-motorista-para-hombre-pantal-n-con-varias-cremalleras-color-blanco-rojo-y.jpg_Q90.jpg_.webp",
+      "tags": 
+        {
+          "category": "pantalones",
           "colour": "red"
         }
     }

@@ -25,22 +25,74 @@
                     Zamazon
                 </h1>
             </div>
-            <div class="col my-0 py-0">
-                <a href="products.html">
-                    <button type="button" class="btn btn-primary py-0">See products</button>
-                </a>
-            </div>
         </header>
         <main class="row mx-0">
             
             
-            <div class="col-sm-6 col-xs-6 row px-0" id="formulario">
+            <div class="col-sm-6 col-12 row px-0" id="formulario">
                 <!-- <div class="col-12 alert alert-danger position-relative" id="incorrect-login-alert" role="alert">
                     Nombre de usuario o contraseña incorrectos!
                 </div> -->
                 <div id="incorrect-login-alert">
                 </div>
+                <!-- <form class="col-12 row" id="signup-form" onsubmit="handleSubmit(event)">
+                    <div class=" login-title">
+                        <h1 class="text-primary">Crear una cuenta</h1>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label for="signup-username" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Usuario</label>
+                      <div class="col-sm-8 col-md-9 col-lg-10 px-0">
+                        <input type="text" name="signup-username" class="form-control" id="signup-username" placeholder="Usuario">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="signup-password" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Contraseña</label>
+                      <div class="col-sm-8 col-md-9 col-lg-10 px-0">
+                        <input type="password" name="signup-password" class="form-control" id="signup-password" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="signup-password-rep" class="col-sm-4 col-md-3 col-lg-2 col-form-label">Repita la contraseña</label>
+                        <div class="col-sm-8 col-md-9 col-lg-10 px-0">
+                          <input type="password" name="signup-password-rep" class="form-control" id="signup-password-rep" placeholder="Password">
+                        </div>
+                      </div>
+
+                    <a href="products.html">
+                        <button type="submit" class="btn btn-primary" id="signin-button">Crear cuenta</button>
+                    </a>                            
+                </form> -->
                 <form class="col-12 row" id="login-form" onsubmit="handleSubmit(event)">
+                    <div class=" login-title">
+                        <h1 class="text-primary">Login</h1>
+                    </div>
+                    
+                    <div class="form-group row">
+                      <label for="login-username" class="col-sm-4 col-md-2 col-form-label">Usuario</label>
+                      <div class="col-sm-8 col-md-10 px-0">
+                        <input type="text" name="login-username" class="form-control" id="login-username" placeholder="Usuario">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="login-password" class="col-sm-4 col-md-2 col-form-label">Password</label>
+                      <div class="col-sm-8 col-md-10 px-0">
+                        <input type="password" name="login-password" class="form-control" id="login-password" placeholder="Password">
+                      </div>
+                    </div>
+
+                    <a href="products.html">
+                        <button type="submit" class="btn btn-primary" id="submit-button">Login</button>
+                    </a> 
+
+
+                    <div id="signin-text">
+                        <p style ="font-size: small;">¿Aún no tienes cuenta? Crearse una cuenta.</p>
+                    </div>
+                           
+                </form>
+
+                <!-- <form class="col-12 row" id="login-form" onsubmit="handleSubmit(event)">
                     <div class=" login-title">
                         <h1 class="text-primary">Login</h1>
                     </div>
@@ -66,7 +118,7 @@
                         <p style ="font-size: small;">¿Aún no tienes cuenta? <a href=""> Crearse una cuenta.</a> </p>
                     </div>
                            
-                </form>
+                </form> -->
             </div>
         </main>
         <footer class="row justify-content-center mx-0">

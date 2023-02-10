@@ -25,6 +25,25 @@ function createUUID() {
   return uuid;
 }
 
+const createCart = () => {
+  let cart = [{
+    "id_cart": createUUID(),
+    "total_price": 0,
+    "id_user": JSON.parse(localStorage.getItem("user")).id
+  }];
+
+
+  $('#cart-dropdown-menu').empty().append(
+    `
+    <li>
+      <h5>No hay productos en el carrito</h5>
+    </li>
+    `
+  )
+
+  return cart;
+}
+
 const eventHandlerPurchase = (cart) => {
   $('#purchase-button').on("click", function() {
 
@@ -36,16 +55,10 @@ const eventHandlerPurchase = (cart) => {
     axios.post(url+`/purchases`, {purchase});
 
     console.log("Subido al servidor");
-
-    $('#cart-dropdown-menu').empty().append(
-      `
-      <li>
-        <h5>No hay productos en el carrito</h5>
-      </li>
-      `
-    )
     localStorage.removeItem("cart");
-    createUUID
+
+    cart = createCart();
+    
   })
 }
 const displayProducts = (products) => {
@@ -134,7 +147,7 @@ const displayCart = (products, cart) => {
         <button type="submit" class="btn btn-primary py-0" id="purchase-button"><h6 class="my-0 py-1">Purchase</h6></button>
       </li>      
       `);
-
+      console.log(cart)
       eventHandlerPurchase(cart);
            
   }
@@ -152,28 +165,15 @@ $( window ).on( "load",  async function () {
     window.location.href = "login.html";
   }
   
-  if (JSON.parse(localStorage.getItem("cart")) != null) {
+  if (JSON.parse(localStorage.getItem("cart")) != null && JSON.parse(localStorage.getItem("user")).id === JSON.parse(localStorage.getItem("cart"))[0].id_user) {
     var cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart);
     displayCart(products, cart);
   
   } else {
-    var cart = [{
-      "id_cart": createUUID(),
-      "total_price": 0,
-      "id_user": JSON.parse(localStorage.getItem("user")).id
-    }]
-
-    console.log(cart);
-
-    $('#cart-dropdown-menu').append(
-      `
-      <li>
-        <h5>No hay productos en el carrito</h5>
-      </li>
-      `
-    )
+    var cart = createCart();
   }
+
   displayProducts(products);
 
     $('.add-more').on("click", function () {
