@@ -1,0 +1,138 @@
+/* General style */
+.btn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+/* Header style*/
+header {
+    background-color: rgb(109, 255, 141);
+    height: 3em;
+}
+
+header.row>.col {
+    display: flex;
+    /* padding: 0; */
+    align-items: center;
+}
+header.row>:first-child {
+    display:flex;
+    justify-content: flex-start;
+}
+header.row>:first-child>p {
+    margin-bottom: 0;
+}
+
+header.row>:last-child {
+    display:flex;
+    justify-content: flex-end;
+}
+
+.btn-group i {
+    color: #0d6efd;
+}
+.dropdown-item:hover {
+    background-color: rgb(205, 255, 216);
+}
+
+.dropdown-item:hover {
+    background-color: rgb(205, 255, 216);
+}
+
+.dropdown-menu {
+    padding-top: 1em;
+    width: 17em;
+}
+
+.cart-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-image>img {
+    width: 75px;
+    border-radius: 25px;
+}
+
+.cart-units, .cart-price, .cart-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding-left: 1rem;
+}
+#cart-total>h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart-dropdown-menu>:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+main {
+    background-color: rgb(205, 255, 216);
+    flex-wrap: wrap;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* .card-body{
+    max-width: 30em;
+    height: 100%;
+    width: 90%;
+    min-width: 5em;
+    background-color: rgb(219, 255, 227);
+} */
+.card>div{
+    height: 100%;
+}
+
+.add-cart{
+    display: flex;
+    justify-content: center;
+}
+
+.add-more-less {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.add-minus>i{
+    color: rgb(255, 75, 75);
+}
+
+.add-more>i{
+    color: rgb(0, 255, 0);
+}
+
+/* Footer style*/
+footer {
+    display: flex;
+    align-items: center;
+    background-color: rgb(109, 255, 141);
+    height: 3em;
+}
+
+footer>div{
+    display:flex;
+    justify-content: space-evenly;
+}

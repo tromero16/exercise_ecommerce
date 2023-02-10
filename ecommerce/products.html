@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+    <link rel="stylesheet" type="text/css" href="products.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/c62044033c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script type="text/javascript" src="products.js"></script>
+  </head>
+  <body>
+    <header class="row mx-0">
+      <div class="col">
+        <h1 class="text-primary my-0">Zamazon</h1>
+      </div>
+
+      <div class="col">
+        <div class="btn-group px-4" id="cart-dropdown">
+          <button
+            type="button"
+            class="btn py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-cart-shopping fa-2x"></i>
+          </button>
+          <ul class="dropdown-menu" id="cart-dropdown-menu">
+            
+          </ul>
+        </div>
+        <div class="btn-group" id="account-dropdown">
+          <button
+            type="button"
+            class="btn py-0"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </button>
+          <ul class="dropdown-menu" id="account-dropdown-menu">
+            <li><a class="dropdown-item" href="#">Account settings</a></li>
+            <li><a class="dropdown-item" href="#">View orders</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" id="logout-button" href="login.html">Logout</a></li>
+          </ul>
+        </div>
+
+        <!-- <a href="login.html">
+            <button type="button" class="btn btn-primary py-0">Logout</button>
+            </a> -->
+      </div>
+    </header>
+    <main class="row mx-0"id="main-wrapper">
+      
+    </main>
+    <footer class="row justify-content-center mx-0">
+      <div class="col-sm-4 col-xs-6">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="”noopener"
+          noreferrer”
+        >
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+
+        <a
+          href="https://twitter.com/"
+          target="_blank"
+          rel="”noopener"
+          noreferrer”
+        >
+          <i class="fa-brands fa-twitter fa-2x"></i>
+        </a>
+
+        <a
+          href="https://es-es.facebook.com/"
+          target="_blank"
+          rel="”noopener"
+          noreferrer”
+        >
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "num": 1,
+      "name": "bulbasaur",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "code": 1,
+            "name": "grass"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "code": 2,
+            "name": "poison"
+          }
+        }
+      ],
+      "images": [
+        {
+          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/1.png",
+          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/1.png"
+        },
+        {
+          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/1.png",
+          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/1.png"
+        }
+      ],
+      "moves": {
+        "HM": [
+          "cut"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "num": 549,
+      "name": "lilligant",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "code": 1,
+            "name": "grass"
+          }
+        }
+      ],
+      "images": [
+        {
+          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/549.png",
+          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/549.png"
+        },
+        {
+          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/549.png",
+          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/549.png"
+        }
+      ],
+      "moves": {
+        "HM": null
+      }
+    },
+    {
+      "id": 3,
+      "num": 6,
+      "name": "charizard",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "code": 1,
+            "name": "fire"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "code": 2,
+            "name": "flying"
+          }
+        }
+      ],
+      "images": [
+        {
+          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/6.png",
+          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/6.png"
+        },
+        {
+          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/6.png",
+          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/6.png"
+        }
+      ],
+      "moves": {
+        "HM": [
+          "fly"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "num": 50,
+      "name": "diglett",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "code": 1,
+            "name": "ground"
+          }
+        }
+      ],
+      "images": [
+        {
+          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/50.png",
+          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/50.png"
+        },
+        {
+          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/50.png",
+          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/50.png"
+        }
+      ],
+      "moves": {
+        "HM": null
+      }
+    },
+    {
+      "id": 5,
+      "num": 587,
+      "name": "emolga",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "code": 1,
+            "name": "electric"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "code": 2,
+            "name": "flying"
+          }
+        }
+      ],
+      "images": [
+        {
+          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/587.png",
+          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/587.png"
+        },
+        {
+          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/587.png",
+          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/587.png"
+        }
+      ],
+      "moves": {
+        "HM": [
+          "surf"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "num": 60,
+      "name": "polywag",
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "code": 1,
+            "name": "water"
+          }
+        }
+      ],
+      "images": [
+        {
+          "front": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/front/60.png",
+          "back": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/normal/back/60.png"
+        },
+        {
+          "front_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/front/60.png",
+          "back_shiny": "https://raw.githubusercontent.com/luciajedi/pakumon-api/master/img/shiny/back/60.png"
+        }
+      ],
+      "moves": {
+        "HM": [
+          "surf"
+        ]
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "anakin",
+      "password": "jcosmvl"
+    }, {
+      "id": 2,
+      "username": "gtom1",
+      "password": "Hola1"
+    }
+  ]
+}
