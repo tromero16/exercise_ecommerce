@@ -233,11 +233,9 @@ $( window ).on( "load",  async function () {
         }
     });
 
-    // $('#cart-dropdown').hover(function(){ 
-    //     $('.dropdown-toggle', this).trigger('click'); 
-    // });
-
-    // $('#account-dropdown').hover(function(){ 
-    //     $('.dropdown-toggle', this).trigger('click'); 
-    // });
+    $('.navbar-button').on("click", function () {
+      console.log('Hola?');
+      console.log(this.innerText.toLowerCase());
+      
+    })
 });
